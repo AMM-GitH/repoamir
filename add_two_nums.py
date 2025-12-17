@@ -1,4 +1,16 @@
-def add_two_nums(num1, num2):
-  return num1+num2
+import sys
 
-# TODO add print statement
+def add_nums(args):
+	total = 0 
+	for num in args:
+		total += int(num)
+	return total
+
+def main():
+	scriptname = sys.argv[0]
+	result = add_nums(sys.argv[1:])
+	print("The script name is :", scriptname)
+	print("Total:", result)
+
+if __name__ == "__main__":
+	main()
